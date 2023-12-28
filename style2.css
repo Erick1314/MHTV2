@@ -1,0 +1,101 @@
+body{
+	background-image: url("images/fondos/fondoOk.jpg");
+	background-size: cover; 
+	}
+
+@font-face{
+      font-family: 'miLema';
+      src: url("fonts/cursive.ttf");
+}
+  
+@font-face{
+      font-family: 'linkys';
+      src: url("fonts/Cookie-Regular.ttf");
+}  
+
+@font-face{
+      font-family: 'tablita';
+      src: url("fonts/Lobster-Regular.ttf");
+} 
+@font-face{
+      font-family: 'cuerpo';
+      src: url("fonts/Solway-Medium.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: White;
+  padding: 1px;
+  text-align: right;
+}
+
+.header {
+  padding: 10px 16px;
+  color: #f1f1f1;
+  }
+
+.header:hover{
+  font-weight: bolder;
+}
+
+.x{
+    background: linear-gradient( 90deg, #AED6F1 0%, #D7BDE2 31%, #F5B7B1  100%  );
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient( 90deg, #AED6F1 0%, #D7BDE2 31%, #F5B7B1  100%   );
+}
+
+.sticky + .content {
+  padding-top: 100px;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+   font-family: linkys;
+   font-size: 30px;
+}
+
+#customers {
+  background-color: #FF96A6;
+  font-family: tablita;
+  border-collapse: collapse;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#customers tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+h1, h2{
+  font-family: miLema;
+
+}
+
+td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 20px;
+}
+
+p,li{
+  font-family: cuerpo;
+  padding: 15px;
+}

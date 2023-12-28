@@ -1,0 +1,501 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+.boton-contacto {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3498db; /* Puedes ajustar el color de fondo según tu preferencia */
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .boton-contacto:hover {
+	background-color: #2980b9; /* Color de fondo al pasar el mouse */
+  }
+  
+  .boton-contacto i {
+	margin-right: 8px;
+  }
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.boton-whatsapp {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #25d366; /* Color de fondo de WhatsApp */
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .boton-whatsapp:hover {
+	background-color: #128c7e; /* Cambia el color al pasar el mouse */
+  }
+  
+  .boton-whatsapp i {
+	margin-right: 8px;
+  }
+
+
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/backdrop.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+}
+
+.boton-inicio {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3498db; /* Color de fondo relacionado con la página principal */
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .boton-inicio:hover {
+	background-color: #2980b9; /* Cambia el color al pasar el mouse */
+  }
+  
+  .boton-inicio i {
+	margin-right: 8px;
+  }
+  .boton-noticias {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #27ae60; /* Color de fondo relacionado con noticias */
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .boton-noticias:hover {
+	background-color: #219653; /* Cambia el color al pasar el mouse */
+  }
+  
+  .boton-noticias i {
+	margin-right: 8px;
+  }
+
+.boton-programacion {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3498db; /* Color de fondo relacionado con programación televisiva */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+/* Estilos específicos para la sección de noticias al estilo TikTok */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tiktok-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.tiktok-card {
+    max-width: 300px;
+    margin: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tiktok-card:hover {
+    transform: scale(1.05);
+}
+
+.tiktok-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.news-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.news-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.news-description {
+    color: #555;
+}
+
+.news-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #ccc;
+}
+
+.like-btn, .dislike-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.like-btn:hover, .dislike-btn:hover {
+    color: #00cc00;
+}
+
+.like-btn span, .dislike-btn span {
+    margin-left: 5px;
+}
+.boton-programacion:hover {
+  background-color: #2980b9; /* Cambia el color al pasar el mouse */
+}
+
+.boton-programacion i {
+  margin-right: 8px;
+}
+.boton-noticiero {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #e74c3c; /* Color de fondo relacionado con noticieros */
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .boton-noticiero:hover {
+	background-color: #c0392b; /* Cambia el color al pasar el mouse */
+  }
+  
+  .boton-noticiero i {
+	margin-right: 8px;
+  }
+  .boton-enlace {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #3498db; /* Color de fondo del botón (puedes cambiarlo) */
+	color: #fff; /* Color del texto del botón */
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+  }
+  
+  .boton-enlace:hover {
+	background-color: #2980b9; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+  }
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+.boton-dolar {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #4CAF50; /* Puedes ajustar el color de fondo según tu preferencia */
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .boton-dolar:hover {
+	background-color: #45a049; /* Color de fondo al pasar el mouse */
+  }
+  
+  .boton-dolar i {
+	margin-right: 8px;
+  }
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+body {
+  background: var(--fondo);
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Puedes ajustar el margen superior según tu diseño */
+}
+
+table, th, td {
+  border: 1px solid #fff; /* Borde blanco para las celdas y la tabla */
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: hsl(249, 42%, 75%); /* Fondo oscuro para las filas pares */
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(177, 220, 223); /* Fondo oscuro para las filas impares */
+}
+
+th {
+  background-color: #e3e7eb; /* Fondo oscuro para las celdas de encabezado */
+  color: #fff; /* Texto blanco para las celdas de encabezado */
+}
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}

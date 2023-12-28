@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHTV Noticias</title>
+    <link rel="stylesheet" href="css/estilos1.css"> <!-- Agrega tu archivo de estilos aquí -->
+    <link rel="stylesheet" href="css/estilos.css"> 
+    <link rel="icon" href="logo.ico">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8d7676;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #60748b;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .comment {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .comment p {
+            margin: 0;
+            color: #333;
+        }
+
+        .comment-actions button {
+            margin-right: 10px;
+            background-color: #eee;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .like-btn {
+            color: green;
+        }
+
+        .dislike-btn {
+            color: red;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MHTV Noticias</h1>
+    <nav>
+        <ul>
+            <a href="index.html" class="boton-inicio">
+                <i class="fas fa-home"></i> Inicio
+              </a>
+            <li><a class="activo" href="index.html">Subir Noticias</a></li>
+            <li><a  href="Registro.html">Iniciar Secion o Registrarse</a></li>
+            <li><a href="ultnoti.html">Ultimas Noticias</a></li>
+            <!-- Agrega más enlaces de navegación según sea necesario -->
+        </ul>
+    </nav>
+</header>
+
+<section id="upload-news">
+    <h2>Subir Noticia</h2>
+    <!-- Formulario para subir noticias -->
+    <form action="php/snoti.php" method="post" enctype="multipart/form-data">
+        <label for="news-title">Título de la Noticia:</label>
+        <input type="text" id="news-title" name="news-title" required>
+
+        <label for="news-content">Contenido de la Noticia:</label>
+        <textarea id="news-content" name="news-content" rows="4" required></textarea>
+
+        <label for="news-image">Imagen de la Noticia:</label>
+        <input type="file" id="news-image" name="news-image" accept="image/*" required>
+
+        <button type="submit">Subir Noticia</button>
+    </form>
+</section>
+
+
+<!-- Agrega más secciones según sea necesario -->
+
+<footer>
+    <!-- Pie de página -->
+</footer>
+
+</body>
+</html>

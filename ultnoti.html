@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHTV Noticias</title>
+    <link rel="stylesheet" href="css/estilos1.css"> <!-- Agrega tu archivo de estilos aquí -->
+    <link rel="stylesheet" href="css/estilos.css"> 
+    <link rel="icon" href="logo.ico">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #975959;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #73a1c7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .comment {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .comment p {
+            margin: 0;
+            color: #333;
+        }
+
+        .comment-actions button {
+            margin-right: 10px;
+            background-color: #eee;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .like-btn {
+            color: green;
+        }
+
+        .dislike-btn {
+            color: red;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MHTV Noticias</h1>
+    <nav>
+        <ul>
+            <a href="index.html" class="boton-inicio">
+                <i class="fas fa-home"></i> Inicio
+              </a>
+            <li><a  href="Foro.html">Subir Noticias</a></li>
+            <li><a  href="Registro.html">Iniciar Secion o Registrarse</a></li>
+            <li><a class="activo" href="ultnoti.html">Ultimas Noticias</a></li>
+            <!-- Agrega más enlaces de navegación según sea necesario -->
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+    <div class="background-container">
+        <section class="tiktok-section">
+            <!-- Noticia 1 -->
+            <div class="tiktok-card">
+                <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                <div class="news-details">
+                    <p class="news-title">Lamentable noticia 
+                        Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                    <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                        Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                        Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                        #NoticiasLempira.</p>
+                </div>
+                <div class="news-actions">
+                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+                </div>
+
+                <section id="comments">
+                    <h2>Comentarios</h2>
+                    <!-- Sección de comentarios -->
+                    <div class="comment">
+                        <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="comment-actions">
+                            <button class="like-btn">Like</button>
+                            <button class="dislike-btn">Dislike</button>
+                        </div>
+                    </div>
+                
+                    <!-- Agrega más comentarios dinámicamente desde el backend -->
+                
+                    <!-- Formulario para agregar comentarios -->
+                    <form action="add_comment.php" method="post">
+                        <label for="comment-content">Agregar Comentario:</label>
+                        <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                
+                        <button type="submit">Comentar</button>
+                    </form>
+                </section>
+                
+
+            </div>
+    
+            <!-- Repite este bloque para más noticias -->
+    <!-- Noticia 1 -->
+    <div class="tiktok-card">
+        <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+        <div class="news-details">
+            <p class="news-title">Lamentable noticia 
+                Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+            <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                #NoticiasLempira.</p>
+        </div>
+        <div class="news-actions">
+            <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+            <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+        </div>
+
+        <section id="comments">
+            <h2>Comentarios</h2>
+            <!-- Sección de comentarios -->
+            <div class="comment">
+                <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="comment-actions">
+                    <button class="like-btn">Like</button>
+                    <button class="dislike-btn">Dislike</button>
+                </div>
+            </div>
+        
+            <!-- Agrega más comentarios dinámicamente desde el backend -->
+        
+            <!-- Formulario para agregar comentarios -->
+            <form action="add_comment.php" method="post">
+                <label for="comment-content">Agregar Comentario:</label>
+                <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+        
+                <button type="submit">Comentar</button>
+            </form>
+        </section>
+        
+
+    </div>
+
+    <!-- Repite este bloque para más noticias -->
+        <!-- Noticia 1 -->
+        <div class="tiktok-card">
+            <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+            <div class="news-details">
+                <p class="news-title">Lamentable noticia 
+                    Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                    Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                    Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                    #NoticiasLempira.</p>
+            </div>
+            <div class="news-actions">
+                <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+            </div>
+
+            <section id="comments">
+                <h2>Comentarios</h2>
+                <!-- Sección de comentarios -->
+                <div class="comment">
+                    <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="comment-actions">
+                        <button class="like-btn">Like</button>
+                        <button class="dislike-btn">Dislike</button>
+                    </div>
+                </div>
+            
+                <!-- Agrega más comentarios dinámicamente desde el backend -->
+            
+                <!-- Formulario para agregar comentarios -->
+                <form action="add_comment.php" method="post">
+                    <label for="comment-content">Agregar Comentario:</label>
+                    <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+            
+                    <button type="submit">Comentar</button>
+                </form>
+            </section>
+            
+
+        </div>
+
+        <!-- Repite este bloque para más noticias -->
+            <!-- Noticia 1 -->
+            <div class="tiktok-card">
+                <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                <div class="news-details">
+                    <p class="news-title">Lamentable noticia 
+                        Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                    <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                        Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                        Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                        #NoticiasLempira.</p>
+                </div>
+                <div class="news-actions">
+                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+                </div>
+
+                <section id="comments">
+                    <h2>Comentarios</h2>
+                    <!-- Sección de comentarios -->
+                    <div class="comment">
+                        <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="comment-actions">
+                            <button class="like-btn">Like</button>
+                            <button class="dislike-btn">Dislike</button>
+                        </div>
+                    </div>
+                
+                    <!-- Agrega más comentarios dinámicamente desde el backend -->
+                
+                    <!-- Formulario para agregar comentarios -->
+                    <form action="add_comment.php" method="post">
+                        <label for="comment-content">Agregar Comentario:</label>
+                        <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                
+                        <button type="submit">Comentar</button>
+                    </form>
+                </section>
+                
+
+            </div>
+    
+            <!-- Repite este bloque para más noticias -->
+                <!-- Noticia 1 -->
+                <div class="tiktok-card">
+                    <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                    <div class="news-details">
+                        <p class="news-title">Lamentable noticia 
+                            Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                        <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                            Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                            Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                            #NoticiasLempira.</p>
+                    </div>
+                    <div class="news-actions">
+                        <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                        <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+    
+    
+                    </div>
+    
+                    <section id="comments">
+                        <h2>Comentarios</h2>
+                        <!-- Sección de comentarios -->
+                        <div class="comment">
+                            <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="comment-actions">
+                                <button class="like-btn">Like</button>
+                                <button class="dislike-btn">Dislike</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Agrega más comentarios dinámicamente desde el backend -->
+                    
+                        <!-- Formulario para agregar comentarios -->
+                        <form action="add_comment.php" method="post">
+                            <label for="comment-content">Agregar Comentario:</label>
+                            <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                    
+                            <button type="submit">Comentar</button>
+                        </form>
+                    </section>
+                    
+    
+                </div>
+        
+                <!-- Repite este bloque para más noticias -->
+                    <!-- Noticia 1 -->
+            <div class="tiktok-card">
+                <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                <div class="news-details">
+                    <p class="news-title">Lamentable noticia 
+                        Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                    <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                        Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                        Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                        #NoticiasLempira.</p>
+                </div>
+                <div class="news-actions">
+                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+                </div>
+
+                <section id="comments">
+                    <h2>Comentarios</h2>
+                    <!-- Sección de comentarios -->
+                    <div class="comment">
+                        <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="comment-actions">
+                            <button class="like-btn">Like</button>
+                            <button class="dislike-btn">Dislike</button>
+                        </div>
+                    </div>
+                
+                    <!-- Agrega más comentarios dinámicamente desde el backend -->
+                
+                    <!-- Formulario para agregar comentarios -->
+                    <form action="add_comment.php" method="post">
+                        <label for="comment-content">Agregar Comentario:</label>
+                        <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                
+                        <button type="submit">Comentar</button>
+                    </form>
+                </section>
+                
+
+            </div>
+    
+            <!-- Repite este bloque para más noticias -->
+                <!-- Noticia 1 -->
+                <div class="tiktok-card">
+                    <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                    <div class="news-details">
+                        <p class="news-title">Lamentable noticia 
+                            Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                        <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                            Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                            Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                            #NoticiasLempira.</p>
+                    </div>
+                    <div class="news-actions">
+                        <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                        <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+    
+    
+                    </div>
+    
+                    <section id="comments">
+                        <h2>Comentarios</h2>
+                        <!-- Sección de comentarios -->
+                        <div class="comment">
+                            <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="comment-actions">
+                                <button class="like-btn">Like</button>
+                                <button class="dislike-btn">Dislike</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Agrega más comentarios dinámicamente desde el backend -->
+                    
+                        <!-- Formulario para agregar comentarios -->
+                        <form action="add_comment.php" method="post">
+                            <label for="comment-content">Agregar Comentario:</label>
+                            <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                    
+                            <button type="submit">Comentar</button>
+                        </form>
+                    </section>
+                    
+    
+                </div>
+        
+                <!-- Repite este bloque para más noticias -->
+                    <!-- Noticia 1 -->
+            <div class="tiktok-card">
+                <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                <div class="news-details">
+                    <p class="news-title">Lamentable noticia 
+                        Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                    <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                        Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                        Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                        #NoticiasLempira.</p>
+                </div>
+                <div class="news-actions">
+                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+                </div>
+
+                <section id="comments">
+                    <h2>Comentarios</h2>
+                    <!-- Sección de comentarios -->
+                    <div class="comment">
+                        <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="comment-actions">
+                            <button class="like-btn">Like</button>
+                            <button class="dislike-btn">Dislike</button>
+                        </div>
+                    </div>
+                
+                    <!-- Agrega más comentarios dinámicamente desde el backend -->
+                
+                    <!-- Formulario para agregar comentarios -->
+                    <form action="add_comment.php" method="post">
+                        <label for="comment-content">Agregar Comentario:</label>
+                        <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                
+                        <button type="submit">Comentar</button>
+                    </form>
+                </section>
+                
+
+            </div>
+    
+            <!-- Repite este bloque para más noticias -->
+                <!-- Noticia 1 -->
+                <div class="tiktok-card">
+                    <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                    <div class="news-details">
+                        <p class="news-title">Lamentable noticia 
+                            Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                        <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                            Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                            Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                            #NoticiasLempira.</p>
+                    </div>
+                    <div class="news-actions">
+                        <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                        <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+    
+    
+                    </div>
+    
+                    <section id="comments">
+                        <h2>Comentarios</h2>
+                        <!-- Sección de comentarios -->
+                        <div class="comment">
+                            <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="comment-actions">
+                                <button class="like-btn">Like</button>
+                                <button class="dislike-btn">Dislike</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Agrega más comentarios dinámicamente desde el backend -->
+                    
+                        <!-- Formulario para agregar comentarios -->
+                        <form action="add_comment.php" method="post">
+                            <label for="comment-content">Agregar Comentario:</label>
+                            <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                    
+                            <button type="submit">Comentar</button>
+                        </form>
+                    </section>
+                    
+    
+                </div>
+        
+                <!-- Repite este bloque para más noticias -->
+                    <!-- Noticia 1 -->
+            <div class="tiktok-card">
+                <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                <div class="news-details">
+                    <p class="news-title">Lamentable noticia 
+                        Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                    <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                        Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                        Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                        #NoticiasLempira.</p>
+                </div>
+                <div class="news-actions">
+                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+                </div>
+
+                <section id="comments">
+                    <h2>Comentarios</h2>
+                    <!-- Sección de comentarios -->
+                    <div class="comment">
+                        <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="comment-actions">
+                            <button class="like-btn">Like</button>
+                            <button class="dislike-btn">Dislike</button>
+                        </div>
+                    </div>
+                
+                    <!-- Agrega más comentarios dinámicamente desde el backend -->
+                
+                    <!-- Formulario para agregar comentarios -->
+                    <form action="add_comment.php" method="post">
+                        <label for="comment-content">Agregar Comentario:</label>
+                        <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                
+                        <button type="submit">Comentar</button>
+                    </form>
+                </section>
+                
+
+            </div>
+    
+            <!-- Repite este bloque para más noticias -->
+                <!-- Noticia 1 -->
+                <div class="tiktok-card">
+                    <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                    <div class="news-details">
+                        <p class="news-title">Lamentable noticia 
+                            Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                        <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                            Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                            Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                            #NoticiasLempira.</p>
+                    </div>
+                    <div class="news-actions">
+                        <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                        <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+    
+    
+                    </div>
+    
+                    <section id="comments">
+                        <h2>Comentarios</h2>
+                        <!-- Sección de comentarios -->
+                        <div class="comment">
+                            <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="comment-actions">
+                                <button class="like-btn">Like</button>
+                                <button class="dislike-btn">Dislike</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Agrega más comentarios dinámicamente desde el backend -->
+                    
+                        <!-- Formulario para agregar comentarios -->
+                        <form action="add_comment.php" method="post">
+                            <label for="comment-content">Agregar Comentario:</label>
+                            <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                    
+                            <button type="submit">Comentar</button>
+                        </form>
+                    </section>
+                    
+    
+                </div>
+        
+                <!-- Repite este bloque para más noticias -->
+                    <!-- Noticia 1 -->
+            <div class="tiktok-card">
+                <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                <div class="news-details">
+                    <p class="news-title">Lamentable noticia 
+                        Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                    <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                        Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                        Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                        #NoticiasLempira.</p>
+                </div>
+                <div class="news-actions">
+                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+                </div>
+
+                <section id="comments">
+                    <h2>Comentarios</h2>
+                    <!-- Sección de comentarios -->
+                    <div class="comment">
+                        <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="comment-actions">
+                            <button class="like-btn">Like</button>
+                            <button class="dislike-btn">Dislike</button>
+                        </div>
+                    </div>
+                
+                    <!-- Agrega más comentarios dinámicamente desde el backend -->
+                
+                    <!-- Formulario para agregar comentarios -->
+                    <form action="add_comment.php" method="post">
+                        <label for="comment-content">Agregar Comentario:</label>
+                        <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                
+                        <button type="submit">Comentar</button>
+                    </form>
+                </section>
+                
+
+            </div>
+    
+            <!-- Repite este bloque para más noticias -->
+                <!-- Noticia 1 -->
+                <div class="tiktok-card">
+                    <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                    <div class="news-details">
+                        <p class="news-title">Lamentable noticia 
+                            Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                        <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                            Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                            Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                            #NoticiasLempira.</p>
+                    </div>
+                    <div class="news-actions">
+                        <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                        <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+    
+    
+                    </div>
+    
+                    <section id="comments">
+                        <h2>Comentarios</h2>
+                        <!-- Sección de comentarios -->
+                        <div class="comment">
+                            <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="comment-actions">
+                                <button class="like-btn">Like</button>
+                                <button class="dislike-btn">Dislike</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Agrega más comentarios dinámicamente desde el backend -->
+                    
+                        <!-- Formulario para agregar comentarios -->
+                        <form action="add_comment.php" method="post">
+                            <label for="comment-content">Agregar Comentario:</label>
+                            <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                    
+                            <button type="submit">Comentar</button>
+                        </form>
+                    </section>
+                    
+    
+                </div>
+        
+                <!-- Repite este bloque para más noticias -->
+                    <!-- Noticia 1 -->
+            <div class="tiktok-card">
+                <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                <div class="news-details">
+                    <p class="news-title">Lamentable noticia 
+                        Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                    <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                        Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                        Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                        #NoticiasLempira.</p>
+                </div>
+                <div class="news-actions">
+                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+                </div>
+
+                <section id="comments">
+                    <h2>Comentarios</h2>
+                    <!-- Sección de comentarios -->
+                    <div class="comment">
+                        <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="comment-actions">
+                            <button class="like-btn">Like</button>
+                            <button class="dislike-btn">Dislike</button>
+                        </div>
+                    </div>
+                
+                    <!-- Agrega más comentarios dinámicamente desde el backend -->
+                
+                    <!-- Formulario para agregar comentarios -->
+                    <form action="add_comment.php" method="post">
+                        <label for="comment-content">Agregar Comentario:</label>
+                        <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                
+                        <button type="submit">Comentar</button>
+                    </form>
+                </section>
+                
+
+            </div>
+    
+            <!-- Repite este bloque para más noticias -->
+                <!-- Noticia 1 -->
+                <div class="tiktok-card">
+                    <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                    <div class="news-details">
+                        <p class="news-title">Lamentable noticia 
+                            Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                        <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                            Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                            Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                            #NoticiasLempira.</p>
+                    </div>
+                    <div class="news-actions">
+                        <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                        <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+    
+    
+                    </div>
+    
+                    <section id="comments">
+                        <h2>Comentarios</h2>
+                        <!-- Sección de comentarios -->
+                        <div class="comment">
+                            <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="comment-actions">
+                                <button class="like-btn">Like</button>
+                                <button class="dislike-btn">Dislike</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Agrega más comentarios dinámicamente desde el backend -->
+                    
+                        <!-- Formulario para agregar comentarios -->
+                        <form action="add_comment.php" method="post">
+                            <label for="comment-content">Agregar Comentario:</label>
+                            <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                    
+                            <button type="submit">Comentar</button>
+                        </form>
+                    </section>
+                    
+    
+                </div>
+        
+                <!-- Repite este bloque para más noticias -->
+                    <!-- Noticia 1 -->
+            <div class="tiktok-card">
+                <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                <div class="news-details">
+                    <p class="news-title">Lamentable noticia 
+                        Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                    <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                        Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                        Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                        #NoticiasLempira.</p>
+                </div>
+                <div class="news-actions">
+                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+
+
+                </div>
+
+                <section id="comments">
+                    <h2>Comentarios</h2>
+                    <!-- Sección de comentarios -->
+                    <div class="comment">
+                        <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="comment-actions">
+                            <button class="like-btn">Like</button>
+                            <button class="dislike-btn">Dislike</button>
+                        </div>
+                    </div>
+                
+                    <!-- Agrega más comentarios dinámicamente desde el backend -->
+                
+                    <!-- Formulario para agregar comentarios -->
+                    <form action="add_comment.php" method="post">
+                        <label for="comment-content">Agregar Comentario:</label>
+                        <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                
+                        <button type="submit">Comentar</button>
+                    </form>
+                </section>
+                
+
+            </div>
+    
+            <!-- Repite este bloque para más noticias -->
+                <!-- Noticia 1 -->
+                <div class="tiktok-card">
+                    <img src="images/fondos/Paintbrush.png" alt="Noticia 1">
+                    <div class="news-details">
+                        <p class="news-title">Lamentable noticia 
+                            Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez</p>
+                        <p class="news-description">Encontrado sin vida el cuerpo que según vecinos pertenece a Doña Ofelia Lopez, humilde mujer en el sector de Guarita.
+                            Desde ayer se buscaba hasta con Drones en el municipio de San Juan Guarita y Guarita,
+                            Via: 𝑬𝒙𝒑𝒍𝒐𝒓𝒂𝒏𝒅𝒐 𝑳𝒆𝒎𝒑𝒊𝒓𝒂 𝑶𝒇𝒊𝒄𝒊𝒂𝒍
+                            #NoticiasLempira.</p>
+                    </div>
+                    <div class="news-actions">
+                        <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                        <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+    
+    
+                    </div>
+    
+                    <section id="comments">
+                        <h2>Comentarios</h2>
+                        <!-- Sección de comentarios -->
+                        <div class="comment">
+                            <p>Usuario: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="comment-actions">
+                                <button class="like-btn">Like</button>
+                                <button class="dislike-btn">Dislike</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Agrega más comentarios dinámicamente desde el backend -->
+                    
+                        <!-- Formulario para agregar comentarios -->
+                        <form action="add_comment.php" method="post">
+                            <label for="comment-content">Agregar Comentario:</label>
+                            <textarea id="comment-content" name="comment-content" rows="3" required></textarea>
+                    
+                            <button type="submit">Comentar</button>
+                        </form>
+                    </section>
+                    
+    
+                </div>
+        
+                <!-- Repite este bloque para más noticias -->
+
+
+
+
+        
+        </section>
+    </div>
+              <!-- Noticia Backend-->
+
+             <!-- Noticia Backend-->
+
+
+
+    <script src="js/Subir.js"></script>
+    <script src="js/ajax.js"></script>
+    </body>
+</html>
+
+<footer>
+    <!-- Pie de página -->
+</footer>
+
+</body>
+</html>

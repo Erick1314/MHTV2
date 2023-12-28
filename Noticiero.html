@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos1.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>MH NOTICIAS/TIERRA LENCA</title>
+    <link rel="stylesheet" type="text/css" href="scss/estilos.css">
+    <link rel="icon" href="logo.ico">
+
+
+    <style>
+        @media only screen and (max-width: 600px) {
+            /* Ajusta el tamaño del texto para pantallas pequeñas */
+            title {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <style>
+        
+
+h1 {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        animation: fadeIn 1s ease; /* Animación fadeIn */
+    }
+
+    /* Define la animación fadeIn */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+	
+    .pelicula-principal {
+        font-size: 16px;
+        min-height: 40.62em;
+        color: #fff;
+        background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/backdrop.jpg);
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 3.12em;
+        display: flex;
+        align-items: end;
+    }
+
+    .pelicula-principal .contenedor {
+        margin: 0 auto;
+        margin-bottom: 6.25em;
+        max-width: 1200px; /* Ajusta el máximo ancho según tus necesidades */
+        width: 100%;
+        padding: 0 20px; /* Añade espaciado a los lados */
+    }
+
+    .pelicula-principal .titulo {
+        font-weight: 600;
+        font-size: 3.12em;
+        margin-bottom: 0.4em;
+        max-width: 80%; /* Ajusta el máximo ancho según tus necesidades */
+    }
+
+    .pelicula-principal .descripcion {
+        font-weight: normal;
+        font-size: 1em;
+        line-height: 1.75em;
+        max-width: 80%; /* Ajusta el máximo ancho según tus necesidades */
+        margin-bottom: 1.25em;
+    }
+
+    .pelicula-principal .boton {
+        background: rgba(0,0,0, 0.5);
+        border: none;
+        border-radius: 0.31em;
+        padding: 0.93em 1.87em;
+        color: #fff;
+        margin-right: 1.25em;
+        cursor: pointer;
+        transition: .3s ease all;
+        font-size: 1.12em;
+    }
+
+    .pelicula-principal .boton:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .pelicula-principal .boton i {
+        margin-right: 1.25em;
+    }
+
+    /* Otros estilos que puedas tener */
+
+    /* Media queries para hacerlo responsivo */
+    @media screen and (max-width: 800px) {
+        .pelicula-principal {
+            font-size: 14px;
+            min-height: auto;
+            margin-bottom: 2em;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .pelicula-principal .contenedor {
+            margin-bottom: 3em;
+        }
+
+        .pelicula-principal .titulo,
+        .pelicula-principal .descripcion,
+        .pelicula-principal .boton {
+            max-width: 100%;
+        }
+    }
+
+        /* Tus estilos personalizados van aquí */
+		
+    </style>
+</head>
+<body>
+
+<div class="x">
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">MHTV</h2>
+            <a href="comerci.html" class="boton-dolar">
+              <i class="fas fa-dollar-sign"></i> Consultas Comerciales
+            </a>
+         
+              <a href="index.html"  class="boton-inicio">
+                <i class="fas fa-home"></i> Inicio
+              </a>
+              
+              <nav>
+              <a href="ultnoti.html" class="boton-noticias">
+                <i class="fas fa-newspaper"></i> Noticias
+              </a>
+              <a href="Programacion.html" class="boton-programacion">
+                <i class="fas fa-tv"></i> Programación
+              </a>
+              <a href="Noticiero.html" class="activo" class="boton-noticiero">
+                <i class="fas fa-newspaper"></i> Noticiero
+              </a>
+              <a href="https://wa.link/nd7i8z" text-align: center target="_parent" class="boton-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+            </nav>
+            <a href="contactos.html" class="boton-contacto">
+              <i class="fas fa-phone"></i> Contactanos
+            </a>
+          </div>
+    </header>
+</div>
+
+<h1>Ultimo Noticiero de MH NOTICIAS/TIERRA LENCA</h1>
+
+<div class="pelicula-principal">
+    <div class="contenedor">
+        <div class="titulo">Lunes, Miércoles y Viernes A Partir de Las 7:00 PM</div>
+        <div class="descripcion">
+            Mh Noticias Tierra lenca es el noticiero oficial del sur de Lempira, donde te enterarás de lo último en información de la región; Conducido por Marcos Hernández y su equipo de prensa.
+        </div>
+        <div>
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/8Ipn5wNVASU" title="En Directo MH Noticias 22 de julio 2022." frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <a href="#"><img src="images/productos/mh.jpg" width="100%" alt="Imagen Noticia"></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

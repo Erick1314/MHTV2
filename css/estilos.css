@@ -71,6 +71,8 @@ body {
   height: 3rem;
   margin: 1rem 0; }
 
+
+
 .contenedor-bloque-buscar input[type="text"] {
   border: 0;
   border-radius: 5px 0 0 5px;
@@ -520,7 +522,9 @@ body {
       transition: background-color 0.3s ease;
       }
       
-  /*Pagina servicios*/
+  
+  
+      /*Pagina servicios*/
   .paginas-internas .lista-servicios .col-md-4 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -594,3 +598,20 @@ body {
     background-size: cover; } }
 
 /*# sourceMappingURL=estilos.css.map */
+.boton-noticiero {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #e74c3c; /* Color de fondo relacionado con noticieros */
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .boton-noticiero:hover {
+	background-color: #c0392b; /* Cambia el color al pasar el mouse */
+  }
+  
+  .boton-noticiero i {
+	margin-right: 8px;
+  }

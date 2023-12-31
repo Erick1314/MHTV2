@@ -185,10 +185,52 @@
             window.location.href = newsURL;
         }
     </script>
+
                 <!-- Repite este bloque para más noticias -->
 
 
+                <body>
 
+                    <div class="background-container">
+                        <section class="tiktok-section">
+                            <!-- Noticia 1 -->
+                            <div class="tiktok-card">
+                                <img src="images/Noticias/noti2.png" alt="Noticia 2">
+                                <div class="news-details">
+                                    <p class="news-title">#MHTV || ¡Celebrando el inicio del año con alegría y corazones solidarios! </p>
+                                    <p class="news-description">#MHTV || ¡Celebrando el inicio del año con alegría y corazones solidarios! 
+                                        El Abogado Eblin Rodriguez junto a amistades y su gran equipo de trabajo organizaron hoy una cena de Año Nuevo, llena de sonrisas y buenos momentos, compartiendo la felicidad con las personas de la tercera edad en las encantadoras comunidades de El Curin y El Sitio Mapulaca Lempira. 
+                                        ¡Por un año 2024 lleno de amor y generosidad! 🎉💖.</p>
+                                </div>
+                                <div class="news-actions">
+                                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+                                    <button class="share-btn" onclick="shareNews()">Compartir</button>
+                                </div>
+                    
+                                <section id="comments">
+                                    <!-- Sección de comentarios -->
+                                    <!-- ... (tu código actual) ... -->
+                                </section>
+                                <a href="noticia2.html" class="read-more-link" onclick="return openNews(event)">Leer más</a>
+                            </div>
+                        </section>
+                    </div>
+                    
+                    <script>
+                        function openNews(event) {
+                            // Detener la propagación del evento para evitar que se abra en una nueva pestaña
+                            event.preventDefault();
+                    
+                            // Obtener la URL de la noticia
+                            const newsURL = event.currentTarget.getAttribute("href");
+                    
+                            // Redirigir a la URL de la noticia en la misma pestaña
+                            window.location.href = newsURL;
+                        }
+                    </script>
+                
+                                <!-- Repite este bloque para más noticias -->
 
         
         </section>

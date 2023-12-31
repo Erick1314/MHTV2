@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHTV Noticias</title>
+    <link rel="stylesheet" href="css/estilos1.css"> <!-- Agrega tu archivo de estilos aquí -->
+    <link rel="stylesheet" href="css/estilos.css"> 
+    <link rel="icon" href="logo.ico">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #975959;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        section {
+            background-color: #73a1c7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .tiktok-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tiktok-card {
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .tiktok-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .news-details {
+            padding: 20px;
+        }
+
+        .news-actions {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .read-more-link {
+            display: block;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .read-more-link:hover {
+            background-color: #555;
+        }
+
+        #comments {
+            margin-top: 20px;
+        }
+
+        .comment {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .comment p {
+            margin: 0;
+            color: #333;
+        }
+
+        .comment-actions button {
+            margin-right: 10px;
+            background-color: #eee;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .like-btn {
+            color: green;
+        }
+
+        .dislike-btn {
+            color: red;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MHTV Noticias</h1>
+    <nav>
+        <a href="mhtv.html" text-align: center target="_parent" class="boton-noticiero">
+            <i class="fas fa-tv"></i>LIVE
+          </a>
+        <ul>
+            <a href="index.html" class="boton-inicio">
+                <i class="fas fa-home"></i> Inicio
+              </a>
+            <li><a  href="Foro.html">Subir Noticias</a></li>
+            <li><a  href="Registro.html">Iniciar Secion o Registrarse</a></li>
+            <li><a class="activo" href="ultnoti.html">Ultimas Noticias</a></li>
+            <!-- Agrega más enlaces de navegación según sea necesario -->
+        </ul>
+    </nav>
+</header>
+
+<div class="background-container">
+    <section class="tiktok-section">
+        <!-- Noticia 1 -->
+        <div class="tiktok-card">
+            <img src="https://github.com/Erick1314/MHTV2/blob/main/Noticias/img/noti3.jpg" alt="Noticia 3">
+            <div class="news-details">
+                <p class="news-title">#MHTV || Accidente Vehicular en Dos Caminos, Valladolid, Lempira: Daños Materiales y Lesiones Reportadas </p>
+                <p class="news-description">#MHTV || Un incidente vial ocurrió hoy a la altura de Dos Caminos, Valladolid, Lempira, según informes de #MHTV. El choque frontal entre un carro PICK UP 
+                    y un camión ha dejado solo daños materiales, pero lamentablemente, una persona resultó lesionada. Las circunstancias que llevaron a este siniestro aún se desconocen.
+
+                    Las autoridades se encuentran en el lugar investigando el accidente para determinar las causas exactas. En la imagen proporcionada, se aprecia la magnitud del impacto entre 
+                    ambos vehículos. Afortunadamente, los servicios de emergencia están atendiendo a la persona lesionada, y hasta el momento, no se han reportado más víctimas.
+                    
+                    Permaneceremos actualizados con más detalles conforme la información se desarrolle. La seguridad vial es fundamental, y este incidente destaca la importancia de conducir con
+                     precaución en todas las circunstancias. #SeguridadVial #AccidenteVehicular #DosCaminos #Lempira #NoticiasMHTV 🚨🛣️</p>
+            </div>
+            <div class="news-actions">
+                <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+                <button class="share-btn" onclick="shareNews()">Compartir</button>
+            </div>
+
+            <section id="comments">
+                <!-- Sección de comentarios -->
+                <!-- ... (tu código actual) ... -->
+            </section>
+            <a href="noticia3.html" class="read-more-link" onclick="return openNews(event)">Leer más</a>
+            
+        </div>
+    </section>
+    <!-- Repite este bloque para más noticias -->
+</div>
+
+<script>
+    function openNews(event) {
+        // Detener la propagación del evento para evitar que se abra en una nueva pestaña
+        event.preventDefault();
+
+        // Obtener la URL de la noticia
+        const newsURL = event.currentTarget.getAttribute("href");
+
+        // Redirigir a la URL de la noticia en la misma pestaña
+        window.location.href = newsURL;
+    }
+</script>
+<script>
+    function shareNews() {
+        // Obtener la URL de la noticia actual
+        const newsURL = window.location.href;
+
+        // Simular la funcionalidad de compartir (puedes personalizar esto según tus necesidades)
+        alert(`Compartir noticia: ${newsURL}`);
+    }
+
+    function openNews(event) {
+        // Detener la propagación del evento para evitar que se abra en una nueva pestaña
+        event.preventDefault();
+
+        // Obtener la URL de la noticia
+        const newsURL = event.currentTarget.getAttribute("href");
+
+        // Redirigir a la URL de la noticia en la misma pestaña
+        window.location.href = newsURL;
+    }
+</script>
+<footer>
+    <!-- Pie de página -->
+</footer>
+
+</body>
+</html>

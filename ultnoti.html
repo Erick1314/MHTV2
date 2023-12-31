@@ -232,7 +232,55 @@
                 
                                 <!-- Repite este bloque para más noticias -->
 
-        
+                                <body>
+
+                                    <div class="background-container">
+                                        <section class="tiktok-section">
+                                            <!-- Noticia 1 -->
+                                            <div class="tiktok-card">
+                                                <img src="Noticias/img/noti3.jpg" alt="Noticia 2">
+                                                <div class="news-details">
+                                                    <p class="news-title">#MHTV || Accidente Vehicular en Dos Caminos, Valladolid, Lempira: Daños Materiales y Lesiones Reportadas </p>
+                                                    <p class="news-description">#MHTV || Un incidente vial ocurrió hoy a la altura de Dos Caminos, Valladolid, Lempira, según informes de #MHTV. El choque frontal entre 
+                                                        un carro PICK UP y un camión ha dejado solo daños materiales, pero lamentablemente, una persona resultó lesionada. Las circunstancias que llevaron a este 
+                                                        siniestro aún se desconocen.
+
+                                                        Las autoridades se encuentran en el lugar investigando el accidente para determinar las causas exactas. En la imagen proporcionada, se aprecia la magnitud del 
+                                                        impacto entre ambos vehículos. Afortunadamente, los servicios de emergencia están atendiendo a la persona lesionada, y hasta el momento, no se han reportado más 
+                                                        víctimas.
+                                                        
+                                                        Permaneceremos actualizados con más detalles conforme la información se desarrolle. La seguridad vial es fundamental, y este incidente destaca la importancia 
+                                                        de conducir con precaución en todas las circunstancias. #SeguridadVial #AccidenteVehicular #DosCaminos #Lempira #NoticiasMHTV 🚨🛣️</p>
+                                                </div>
+                                                <div class="news-actions">
+                                                    <button class="like-btn" onclick="toggleLike(this)">Me gusta <span id="like-count">100</span></button>
+                                                    <button class="dislike-btn" onclick="toggleDislike(this)">No me gusta <span id="dislike-count">20</span></button>
+                                                    <button class="share-btn" onclick="shareNews()">Compartir</button>
+                                                </div>
+                                    
+                                                <section id="comments">
+                                                    <!-- Sección de comentarios -->
+                                                    <!-- ... (tu código actual) ... -->
+                                                </section>
+                                                <a href="Noticias/pages/noticia3.html" class="read-more-link" onclick="return openNews(event)">Leer más</a>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    
+                                    <script>
+                                        function openNews(event) {
+                                            // Detener la propagación del evento para evitar que se abra en una nueva pestaña
+                                            event.preventDefault();
+                                    
+                                            // Obtener la URL de la noticia
+                                            const newsURL = event.currentTarget.getAttribute("href");
+                                    
+                                            // Redirigir a la URL de la noticia en la misma pestaña
+                                            window.location.href = newsURL;
+                                        }
+                                    </script>
+                                
+                                                <!-- Repite este bloque para más noticias -->
         </section>
     </div>
               <!-- Noticia Backend-->

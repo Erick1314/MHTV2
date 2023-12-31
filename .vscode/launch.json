@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\Connect\\OneDrive - AltiaTek\\Documents\\MHTV\\index.html"
+            "file": "D:\\User\\MHTV WEB\\MHTV2\\index.html"
         }
     ]
 }

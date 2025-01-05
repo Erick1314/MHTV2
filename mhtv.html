@@ -10,6 +10,45 @@
     <link rel="stylesheet" href="css/estilos1.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Estilos de Video.js -->
+  <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
+  <style>
+    /* Contenedor adaptable */
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    }
+    /* Ajustes de márgenes del título */
+    h1 {
+      margin-bottom: 0; /* Elimina margen inferior */
+    }
+    /* Reproductor Video.js ajustado al contenedor */
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+	 <!-- Estilos personalizados -->
+ <style>
+  #mhtv-player {
+    width: 640px; /* Ancho fijo del cuadro */
+    height: 360px; /* Alto fijo del cuadro */
+    margin: 20px auto; /* Centrar el cuadro horizontalmente */
+    border: 3px solid #000; /* Borde negro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  .video-js {
+    width: 100%; /* Asegura que el video ocupe todo el contenedor */
+    height: 100%; /* Asegura que el video respete la altura definida */
+  }
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -138,6 +177,27 @@
         </p>
     <p>Disfruta de nuestro contenido en vivo</p>
     </div>
+
+	 <!-- Librerías de Video.js y soporte HLS -->
+  <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+  <script>
+    // Inicializa el reproductor Video.js
+    var player = videojs('video-player', {
+      techOrder: ['html5'],
+      autoplay: true,
+      controls: true,
+      preload: 'auto',
+      fluid: true, // Ajusta el tamaño dinámicamente
+    });
+
+    // Maneja errores de reproducción
+    player.on('error', function () {
+      console.error('Error al reproducir el video.');
+    });
+  </script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+
 </body>
 
 </html>

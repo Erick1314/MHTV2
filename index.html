@@ -11,6 +11,10 @@
       width: 100%;
       padding-top: 56.25%; /* Relación de aspecto 16:9 */
     }
+    /* Ajustes de márgenes del título */
+    h1 {
+      margin-bottom: 0; /* Elimina margen inferior */
+    }
     /* Reproductor Video.js ajustado al contenedor */
     .video-container video {
       position: absolute;
@@ -82,6 +86,7 @@
       </a>
     </div>
   </header>
+<h1 style="text-align: center;">MHTV TV EN VIVO</h1>
   <div class="video-container">
     <video id="video-player" class="video-js vjs-default-skin" controls autoplay preload="auto">
       <source src="https://amixtv.com:19360/mhtv/mhtv.m3u8" type="application/x-mpegURL">

@@ -54,7 +54,16 @@
       </a>
     </div>
   </header>
-
+	<video
+  id="mhtv-player"
+  class="video-js vjs-default-skin"
+  controls
+  preload="auto"
+  width="640"
+  height="360"
+  data-setup='{}'>
+  <source src="https://amixtv.com:19360/mhtv/mhtv.m3u8" type="application/x-mpegURL">
+</video>
   <main>
     <div class="pelicula-principal">
       <div class="contenedor">
@@ -82,10 +91,11 @@
 <p>
     NUESTRA COBERTURA:
     <ul>
-        <li>Canal 71: Inversa ITV en Candelaria y Gualcince, aldeas y caseríos.</li>
+        <li>Canal 51: Telecable "La Virtud" La Virtud, Lempira, aldeas y caseríos.</li>
+	<li>Canal 71: Inversa ITV en Candelaria y Gualcince, aldeas y caseríos.</li>
         <li>Canal 71: RUBI-NET en Guarita, San Juan Guarita, Tómala y Tambla, aldeas y caseríos.</li>
         <li>Canal 99: Cablevision Alexa Gissel en Erandique, San Andrés, Santa Cruz, San Francisco, Dolores y San Miguelito, aldeas y caseríos.</li>
-        <li>Canal 100: MapulacaTV Network, Cablevision Fernandos,Telecable La Virtud y Cablevision Leo en La Virtud, Lempira Virginia, Candelaria, aldeas y caseríos.</li>
+        <li>Canal 100: MapulacaTV Network, Cablevision Fernandos y Cablevision Leo en La Virtud, Lempira Virginia, Candelaria, aldeas y caseríos.</li>
         <li>Canal 113: Tecnovision Melgar y Sol TV Maya en Cololaca, Valladolid, aldeas y caseríos, y en todo el departamento de Ocotepeque.</li>
 	<li>Canal 114: Plan Network en Cololaca, Valladolid, aldeas y caseríos, y en todo el departamento de Ocotepeque.</li>
     </ul>
@@ -302,15 +312,6 @@
 		
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
-	<video
-  id="mhtv-player"
-  class="video-js vjs-default-skin"
-  controls
-  preload="auto"
-  width="640"
-  height="360"
-  data-setup='{}'>
-  <source src="https://amixtv.com:19360/mhtv/mhtv.m3u8" type="application/x-mpegURL">
-</video>
+
 </body>
 </html>

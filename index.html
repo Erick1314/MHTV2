@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	 <!-- Estilos personalizados -->
+  <style>
+    #mhtv-player {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  </style>
+<link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
+<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MHTV NOTICIAS DE LEMPIRA</title>
@@ -292,5 +302,15 @@
 		
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+	<video
+  id="mhtv-player"
+  class="video-js vjs-default-skin"
+  controls
+  preload="auto"
+  width="640"
+  height="360"
+  data-setup='{}'>
+  <source src="https://amixtv.com:19360/mhtv/mhtv.m3u8" type="application/x-mpegURL">
+</video>
 </body>
 </html>

@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
 	 <!-- Estilos personalizados -->
-  <style>
-    #mhtv-player {
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-    }
-  </style>
+ <style>
+  #mhtv-player {
+    width: 640px; /* Ancho fijo del cuadro */
+    height: 360px; /* Alto fijo del cuadro */
+    margin: 20px auto; /* Centrar el cuadro horizontalmente */
+    border: 3px solid #000; /* Borde negro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  .video-js {
+    width: 100%; /* Asegura que el video ocupe todo el contenedor */
+    height: 100%; /* Asegura que el video respete la altura definida */
+  }
+</style>
 <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
 <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
   <meta charset="UTF-8">
